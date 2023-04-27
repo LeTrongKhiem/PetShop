@@ -1,0 +1,12 @@
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\bin\Debug\net7.0\Identity.Infrastructure.deps.json
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\bin\Debug\net7.0\Identity.Infrastructure.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\bin\Debug\net7.0\Identity.Infrastructure.pdb
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.csproj.AssemblyReference.cache
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.AssemblyInfoInputs.cache
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.AssemblyInfo.cs
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\refint\Identity.Infrastructure.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.pdb
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\ref\Identity.Infrastructure.dll
