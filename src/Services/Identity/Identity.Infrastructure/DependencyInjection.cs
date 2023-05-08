@@ -1,4 +1,5 @@
 ﻿using Identity.Infrastructure.Application;
+using Identity.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,9 +10,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<IdentityContext>(options => 
+        services.AddDbContext<UserContext>(options => 
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-        services.AddScoped<IdentityContext>();
+        services.AddScoped<UserContext>();
         services.AddScoped<IIdentityService, IdentityService>();
         return services;
     }

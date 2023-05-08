@@ -10,3 +10,5 @@ D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastru
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\refint\Identity.Infrastructure.dll
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.pdb
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\ref\Identity.Infrastructure.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\bin\Debug\net7.0\Identity.Infrastructure.runtimeconfig.json
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity.Infrastructure\obj\Debug\net7.0\Identity.Infrastructure.genruntimeconfig.cache

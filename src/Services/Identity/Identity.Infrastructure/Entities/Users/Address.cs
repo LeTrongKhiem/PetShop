@@ -9,5 +9,4 @@ public class Address
     public string Line4 { get; set; }
     public string Region { get; set; }
     public Guid? UserId { get; set; }
-    public virtual User User { get; set; }
 }

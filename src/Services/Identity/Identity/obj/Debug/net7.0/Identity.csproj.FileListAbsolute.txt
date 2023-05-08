@@ -94,3 +94,9 @@ D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\obj\Debug
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\obj\Debug\net7.0\Identity.pdb
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\obj\Debug\net7.0\Identity.genruntimeconfig.cache
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\obj\Debug\net7.0\ref\Identity.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Lang\en.json
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Humanizer.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\System.CodeDom.dll
