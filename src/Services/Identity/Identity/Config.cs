@@ -2,7 +2,6 @@
 using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
-using Microsoft.AspNetCore.Identity;
 
 namespace Identity;
 
@@ -44,11 +43,12 @@ public static class Config
             new ApiResource(ApiResourcesScope.PetInfo, "Pet Info Service")
             {
                 ApiSecrets = { new Secret("pi".ToSha256()) }
-            }
+            },
+            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         var integrationApis = new List<IntegrationApi>();
-        
+
         configurationSection.Bind(integrationApis);
 
         foreach (var integrationApi in integrationApis.Where(x => x.Active))
@@ -62,7 +62,8 @@ public static class Config
         return apiResources;
     }
 
-    public static IEnumerable<Client> GetClients(IConfigurationSection config, IConfigurationSection apiResources, IConfigurationSection integrationApisConfig)
+    public static IEnumerable<Client> GetClients(IConfigurationSection config, IConfigurationSection apiResources,
+        IConfigurationSection integrationApisConfig)
     {
         var integrationApis = new List<IntegrationApi>();
         integrationApisConfig.Bind(integrationApis);
@@ -144,7 +145,8 @@ public static class Config
                 {
                     new Secret("directorsecret".ToSha256())
                 },
-                AllowedGrantTypes = new List<string> {
+                AllowedGrantTypes = new List<string>
+                {
                     GrantType.Hybrid,
                     //   "refresh_token"
                 },
@@ -177,7 +179,8 @@ public static class Config
                 {
                     new Secret("managersecret".ToSha256())
                 },
-                AllowedGrantTypes = new List<string> {
+                AllowedGrantTypes = new List<string>
+                {
                     GrantType.Hybrid,
                     //   "refresh_token"
                 },
@@ -210,7 +213,8 @@ public static class Config
                 {
                     new Secret("employeesecret".ToSha256())
                 },
-                AllowedGrantTypes = new List<string> {
+                AllowedGrantTypes = new List<string>
+                {
                     GrantType.Hybrid,
                     //   "refresh_token"
                 },
@@ -243,7 +247,8 @@ public static class Config
                 {
                     new Secret("customersecret".ToSha256())
                 },
-                AllowedGrantTypes = new List<string> {
+                AllowedGrantTypes = new List<string>
+                {
                     GrantType.Hybrid,
                     //   "refresh_token"
                 },
@@ -276,7 +281,8 @@ public static class Config
                 {
                     new Secret("guestsecret".ToSha256())
                 },
-                AllowedGrantTypes = new List<string> {
+                AllowedGrantTypes = new List<string>
+                {
                     GrantType.Hybrid,
                     //   "refresh_token"
                 },
@@ -300,78 +306,80 @@ public static class Config
                 AllowedScopes = guestScopes,
             }
         };
-          var integrationClients = new List<Client>();
+        var integrationClients = new List<Client>();
 
-            #region Integration
+        #region Integration
 
-            //this needs to be moved to integrationapis [] 
-            var integrationApiUrl = config.GetValue<string>("IntegrationApi:Url");
-            if (!string.IsNullOrWhiteSpace(integrationApiUrl))
-            {
-                integrationClients.Add(
-                    new Client
-                    {
-                        AllowedGrantTypes = GrantTypes.ClientCredentials,
-                        ClientSecrets = { new Secret("integrationapi1".ToSha256()) },
-                        AllowedScopes = {
-                            ApiResourcesScope.Notifications,
-                            ApiResourcesScope.FileStorage,
-                            ApiResourcesScope.Contact,
-                            ApiResourcesScope.PetInfo,
-                            IdentityServerConstants.LocalApi.ScopeName
-                        },
-                        Enabled = config.GetValue<bool>("IntegrationApi:Active"),
-                        ClientId = "integrationapi",
-                        ClientName = "Integration API",
-                    });
-            }
-
-            foreach (var integrationApi in integrationApis)
-            {
-                if (integrationApi.Swagger != default)
-                {
-                    integrationClients.Add(
-                        new Client
-                        {
-                            AllowAccessTokensViaBrowser = true,
-                            AllowedGrantTypes = GrantTypes.Implicit,
-                            AllowedScopes =
-                            {
-                            IdentityServerConstants.StandardScopes.OpenId,
-                            IdentityServerConstants.StandardScopes.Profile,
-                            IdentityServerConstants.LocalApi.ScopeName,
-                            integrationApi.Name,
-                            },
-                            ClientId = integrationApi.Swagger.ClientId,
-                            RequireConsent = false,
-                            ClientName = integrationApi.Swagger.ClientName,
-                            RedirectUris = { integrationApi.Swagger.Url + "/swagger/oauth2-redirect.html" }
-                        });
-                }
-            }
-
+        //this needs to be moved to integrationapis [] 
+        var integrationApiUrl = config.GetValue<string>("IntegrationApi:Url");
+        if (!string.IsNullOrWhiteSpace(integrationApiUrl))
+        {
             integrationClients.Add(
                 new Client
                 {
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    ClientSecrets = { new Secret("twilioCallback1".ToSha256()) },
-                    AllowedScopes = {
+                    ClientSecrets = { new Secret("integrationapi1".ToSha256()) },
+                    AllowedScopes =
+                    {
                         ApiResourcesScope.Notifications,
+                        ApiResourcesScope.FileStorage,
                         ApiResourcesScope.Contact,
+                        ApiResourcesScope.PetInfo,
                         IdentityServerConstants.LocalApi.ScopeName
                     },
-                    ClientId = "twilioCallback",
-                    ClientName = "Twilio Callback",
+                    Enabled = config.GetValue<bool>("IntegrationApi:Active"),
+                    ClientId = "integrationapi",
+                    ClientName = "Integration API",
                 });
+        }
 
-            #endregion Integration
+        foreach (var integrationApi in integrationApis)
+        {
+            if (integrationApi.Swagger != default)
+            {
+                integrationClients.Add(
+                    new Client
+                    {
+                        AllowAccessTokensViaBrowser = true,
+                        AllowedGrantTypes = GrantTypes.Implicit,
+                        AllowedScopes =
+                        {
+                            IdentityServerConstants.StandardScopes.OpenId,
+                            IdentityServerConstants.StandardScopes.Profile,
+                            IdentityServerConstants.LocalApi.ScopeName,
+                            integrationApi.Name,
+                        },
+                        ClientId = integrationApi.Swagger.ClientId,
+                        RequireConsent = false,
+                        ClientName = integrationApi.Swagger.ClientName,
+                        RedirectUris = { integrationApi.Swagger.Url + "/swagger/oauth2-redirect.html" }
+                    });
+            }
+        }
 
-            mvcClients = mvcClients.Where(x => !string.IsNullOrWhiteSpace(x.ClientUri)).ToList();
-            var clients = mvcClients
-                // .Concat(webservices)
-                // .Concat(swaggerDocs)
-                .Concat(integrationClients);
+        integrationClients.Add(
+            new Client
+            {
+                AllowedGrantTypes = GrantTypes.ClientCredentials,
+                ClientSecrets = { new Secret("twilioCallback1".ToSha256()) },
+                AllowedScopes =
+                {
+                    ApiResourcesScope.Notifications,
+                    ApiResourcesScope.Contact,
+                    IdentityServerConstants.LocalApi.ScopeName
+                },
+                ClientId = "twilioCallback",
+                ClientName = "Twilio Callback",
+            });
 
-            return clients;
+        #endregion Integration
+
+        mvcClients = mvcClients.Where(x => !string.IsNullOrWhiteSpace(x.ClientUri)).ToList();
+        var clients = mvcClients
+            // .Concat(webservices)
+            // .Concat(swaggerDocs)
+            .Concat(integrationClients);
+
+        return clients;
     }
 }

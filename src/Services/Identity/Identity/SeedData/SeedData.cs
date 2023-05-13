@@ -1,10 +1,7 @@
-﻿using Identity.Application.Abstractions;
-using Identity.Infrastructure;
-using Identity.Infrastructure.Data;
+﻿using Identity.Infrastructure.Data;
 using Identity.Infrastructure.Entities;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
-using IdentityServer4.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +14,7 @@ public class SeedData
         using (var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope())
         {
             var context = scope.ServiceProvider.GetService<UserContext>();
-            
+
             context?.Database.Migrate();
 
             var env = serviceProvider.GetService<IHostEnvironment>();
@@ -26,8 +23,8 @@ public class SeedData
 
             var services = scope.ServiceProvider;
             var config = serviceProvider.GetService<IConfiguration>();
-            var resource = serviceProvider.GetService<IStringResourceService>();
-            
+            // var resource = serviceProvider.GetService<IStringResourceService>();
+
             // var configurationService = new ConfigurationService(config, resource);
             //
             // var defaultPassword = configurationService.GetDefaultPassword();
@@ -35,8 +32,8 @@ public class SeedData
             if (config != null) InitializeIdentityServer(services, config);
 
             // var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
-            var roleManager = scope.ServiceProvider.GetService<RoleManager<ApplicationRole>>();
-            if (context != null && context.Roles.Any())
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
+            if (context != null && !context.Roles.Any())
             {
                 if (roleManager != null) SeedRoles(roleManager);
             }
@@ -50,7 +47,7 @@ public class SeedData
         foreach (var role in roles)
         {
             var exists = roleManager.RoleExistsAsync(role);
-            
+
             if (!exists.Result)
             {
                 roleManager.CreateAsync(new ApplicationRole
@@ -65,32 +62,33 @@ public class SeedData
 
     private static void InitializeIdentityServer(IServiceProvider serviceProvider, IConfiguration configuration)
     {
-        serviceProvider.GetService<PersistedGrantDbContext>()?.Database.Migrate();
-        serviceProvider.GetService<ConfigurationDbContext>()?.Database.Migrate();
-        
-        var context = serviceProvider.GetService<ConfigurationDbContext>();
+        serviceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
+        serviceProvider.GetRequiredService<ConfigurationDbContext>().Database.Migrate();
+
+        var context = serviceProvider.GetRequiredService<ConfigurationDbContext>();
+        context.Database.Migrate();
         var clients = context.Clients.Include(x => x.AllowedScopes).ToList();
-        var requestClients = Config.GetClients(configuration.GetSection("Identity:Clients"), 
+        var requestClients = Config.GetClients(configuration.GetSection("Identity:Clients"),
             configuration.GetSection("Identity:ApiResources"), configuration.GetSection("Identity:IntegrationApis"));
 
-        foreach (var request in requestClients)
+        foreach (var rc in requestClients)
         {
-            var requestEntity = request.ToEntity();
-            if (!clients.Any(x => x.ClientId == request.ClientId))
+            var rcEntity = rc.ToEntity();
+            if (!clients.Any(c => c.ClientId == rc.ClientId))
             {
-                context.Clients.Add(requestEntity);
+                context.Clients.Add(rcEntity);
             }
             else
             {
-                var client = clients.FirstOrDefault(x => x.ClientId == request.ClientId);
-                client.AllowedScopes = requestEntity.AllowedScopes;
-                client.AccessTokenType = requestEntity.AccessTokenType;
-                context.Clients.Add(client);
+                var client = clients.FirstOrDefault(c => c.ClientId == rc.ClientId);
+                client.AllowedScopes = rcEntity.AllowedScopes;
+                client.AccessTokenType = rcEntity.AccessTokenType;
+                context.Clients.Update(client);
             }
         }
 
         context.SaveChanges();
-        
+
         if (!context.IdentityResources.Any())
         {
             foreach (var resource in Config.GetIdentityResources())

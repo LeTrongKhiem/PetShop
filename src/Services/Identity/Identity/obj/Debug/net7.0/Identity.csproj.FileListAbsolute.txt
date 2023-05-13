@@ -100,3 +100,14 @@ D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\System.CodeDom.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.AspNetCore.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Sinks.File.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Sinks.PeriodicBatching.dll
+D:\ASP Net\Microservice\PetShop\PetShop\src\Services\Identity\Identity\bin\Debug\net7.0\Serilog.Sinks.Seq.dll

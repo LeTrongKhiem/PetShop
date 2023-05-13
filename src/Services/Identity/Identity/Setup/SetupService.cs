@@ -1,6 +1,9 @@
 ﻿using Identity.Application.Abstractions;
 using Identity.Application.Service;
 using Identity.Infrastructure.Application;
+using IdentityServer4.EntityFramework.DbContexts;
+using IdentityServer4.EntityFramework.Interfaces;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Identity.Setup;
 
@@ -10,7 +13,6 @@ public static class SetupService
     {
         services.AddScoped<IStringResourceService, StringResourceService>();
         services.AddSingleton<IIdentityService, IdentityService>();
-
         return services;
     }
 }

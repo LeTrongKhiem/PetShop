@@ -4,7 +4,7 @@
     <option name="keyValueStorage">
       <map>
         <entry key="Common:buildConfiguration" value="Debug" />
-        <entry key="Common:ea9b0b0c-f806-4f40-a6f5-8bcf77c31cf4:dbContext" value="Identity.Infrastructure.IdentityContext" />
+        <entry key="Common:ea9b0b0c-f806-4f40-a6f5-8bcf77c31cf4:dbContext" value="Identity.Infrastructure.Data.UserContext" />
         <entry key="Common:noBuild" value="false" />
         <entry key="Common:outputFolder" value="Migrations" />
       </map>

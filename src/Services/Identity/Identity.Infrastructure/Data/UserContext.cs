@@ -16,10 +16,6 @@ public class UserContext : IdentityDbContext<ApplicationUser, ApplicationRole, G
     {
         _identityService = identityService;
     }
-    
-    public UserContext(DbContextOptions<UserContext> options) : base(options)
-    {
-    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)  
     {
