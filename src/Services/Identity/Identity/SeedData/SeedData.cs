@@ -4,6 +4,7 @@ using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace Identity.SeedData;
 
@@ -115,5 +116,20 @@ public class SeedData
             }
         }
         context.SaveChanges();
+    }
+
+    private static void SeedDataFromJson<T>(UserContext context, string filePath) where T : class
+    {
+        if (!context.Set<T>().Any())
+        {
+            if (File.Exists(filePath))
+            {
+                var content = File.ReadAllText(filePath);
+                var entities = JsonConvert.DeserializeObject<List<T>>(content);
+
+                context.Set<T>().AddRange(entities);
+                context.SaveChanges();
+            }
+        }
     }
 }

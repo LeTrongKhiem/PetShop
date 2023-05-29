@@ -23,6 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity", "src\Services\Id
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Infrastructure", "src\Services\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{EA9B0B0C-F806-4F40-A6F5-8BCF77C31CF4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileStorage.API", "FileStorage.API", "{BDB53356-9365-4A97-B64E-824B2F8E8FD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.Infrastructure", "src\Services\FileStorage\FileStorage.Infrastructure\FileStorage.Infrastructure.csproj", "{1D40146D-3AE5-4C6F-9778-4D33C091005A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStorage.API", "src\Services\FileStorage\FileStorage.API\FileStorage.API.csproj", "{E531D4F5-4C6D-48B5-8FE4-468617893B7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +47,14 @@ Global
 		{EA9B0B0C-F806-4F40-A6F5-8BCF77C31CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA9B0B0C-F806-4F40-A6F5-8BCF77C31CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA9B0B0C-F806-4F40-A6F5-8BCF77C31CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D40146D-3AE5-4C6F-9778-4D33C091005A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D40146D-3AE5-4C6F-9778-4D33C091005A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D40146D-3AE5-4C6F-9778-4D33C091005A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D40146D-3AE5-4C6F-9778-4D33C091005A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E531D4F5-4C6D-48B5-8FE4-468617893B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E531D4F5-4C6D-48B5-8FE4-468617893B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E531D4F5-4C6D-48B5-8FE4-468617893B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E531D4F5-4C6D-48B5-8FE4-468617893B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +67,8 @@ Global
 		{69302AAB-9545-4A28-A922-BDBF6A82FFCB} = {23C8E0EF-047D-44BE-BFC9-3C8695DC98E5}
 		{EF0D0B54-A684-471B-A959-A727735CC8ED} = {6272BEFA-D9D0-46F8-AAAF-DD2DB7BC5B8F}
 		{EA9B0B0C-F806-4F40-A6F5-8BCF77C31CF4} = {6272BEFA-D9D0-46F8-AAAF-DD2DB7BC5B8F}
+		{BDB53356-9365-4A97-B64E-824B2F8E8FD1} = {826476C6-037E-4E36-9D0F-E64E63BAD23C}
+		{1D40146D-3AE5-4C6F-9778-4D33C091005A} = {BDB53356-9365-4A97-B64E-824B2F8E8FD1}
+		{E531D4F5-4C6D-48B5-8FE4-468617893B7F} = {BDB53356-9365-4A97-B64E-824B2F8E8FD1}
 	EndGlobalSection
 EndGlobal
