@@ -59,7 +59,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/6.0.5": {
+      "Microsoft.AspNetCore.Cryptography.Internal/6.0.18": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -72,16 +72,16 @@
           }
         }
       },
-      "Microsoft.AspNetCore.DataProtection/6.0.5": {
+      "Microsoft.AspNetCore.DataProtection/6.0.18": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.5",
-          "Microsoft.AspNetCore.DataProtection.Abstractions": "6.0.5",
+          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.18",
+          "Microsoft.AspNetCore.DataProtection.Abstractions": "6.0.18",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Microsoft.Extensions.Options": "6.0.0",
-          "System.Security.Cryptography.Xml": "6.0.0"
+          "System.Security.Cryptography.Xml": "6.0.1"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.DataProtection.dll": {
@@ -94,7 +94,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.DataProtection.Abstractions/6.0.5": {
+      "Microsoft.AspNetCore.DataProtection.Abstractions/6.0.18": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll": {
@@ -107,11 +107,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore/6.0.5": {
+      "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore/6.0.18": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.DataProtection": "6.0.5",
-          "Microsoft.EntityFrameworkCore": "6.0.5"
+          "Microsoft.AspNetCore.DataProtection": "6.0.18",
+          "Microsoft.EntityFrameworkCore": "6.0.18"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.dll": {
@@ -248,11 +248,11 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Design/6.0.5": {
+      "Microsoft.EntityFrameworkCore.Design/6.0.10": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "2.8.26",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.5"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.10"
         },
         "compile": {
           "lib/net6.0/_._": {
@@ -1017,7 +1017,7 @@
           }
         }
       },
-      "System.Security.Cryptography.Pkcs/6.0.0": {
+      "System.Security.Cryptography.Pkcs/6.0.1": {
         "type": "package",
         "dependencies": {
           "System.Formats.Asn1": "6.0.0"
@@ -1064,11 +1064,11 @@
           }
         }
       },
-      "System.Security.Cryptography.Xml/6.0.0": {
+      "System.Security.Cryptography.Xml/6.0.1": {
         "type": "package",
         "dependencies": {
           "System.Security.AccessControl": "6.0.0",
-          "System.Security.Cryptography.Pkcs": "6.0.0"
+          "System.Security.Cryptography.Pkcs": "6.0.1"
         },
         "compile": {
           "lib/net6.0/System.Security.Cryptography.Xml.dll": {
@@ -1238,7 +1238,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore": "6.0.5",
+          "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore": "6.0.18",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-preview.3.23174.2"
         },
         "compile": {
@@ -1305,10 +1305,10 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.Cryptography.Internal/6.0.5": {
-      "sha512": "JjIZQLQdiGz+BTXXRMukj452BfHtV46EdqTv4y/CfmMVTQWZvQMdvh9KHEtk9a9dRsXJUGCgNkhiODswAvDytg==",
+    "Microsoft.AspNetCore.Cryptography.Internal/6.0.18": {
+      "sha512": "8sxQmc2dE64+995KE9CsplHfxbQQVs4Kk8/0dbo+vjzC7nJyNRqt8Y6G9lyG2EsIldV7+bdZmiq6Hwc8Js++vw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.internal/6.0.5",
+      "path": "microsoft.aspnetcore.cryptography.internal/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1320,14 +1320,14 @@
         "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
-        "microsoft.aspnetcore.cryptography.internal.6.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.6.0.18.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.internal.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.DataProtection/6.0.5": {
-      "sha512": "DazAUoDVV4HQw0JKXFIJaGvJa71/rYwGsUWTRrojjtah1EcdABN7rI/lIfU2nmJD2xbqo5Ee6GIKoIR8gMamig==",
+    "Microsoft.AspNetCore.DataProtection/6.0.18": {
+      "sha512": "puDr4GSsTEYD7LVSlrKJeCd6e1N8LHHrAtIMEbVTUCIq2yiAB1vPSkvnAi012wEJga3lnq9y/M2G3WCuvhS31A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.dataprotection/6.0.5",
+      "path": "microsoft.aspnetcore.dataprotection/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1339,14 +1339,14 @@
         "lib/net6.0/Microsoft.AspNetCore.DataProtection.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.xml",
-        "microsoft.aspnetcore.dataprotection.6.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.dataprotection.6.0.18.nupkg.sha512",
         "microsoft.aspnetcore.dataprotection.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.DataProtection.Abstractions/6.0.5": {
-      "sha512": "vUg6XkfPQe/fp3zg13EmmpJHAAqjT3QeIB7I3MDGvsiIdYrjpXSxHCWagR9HZcMQgaN5xys/IAIGsrOl0ndPFw==",
+    "Microsoft.AspNetCore.DataProtection.Abstractions/6.0.18": {
+      "sha512": "/Tdz713Bml7rjERjY7djNfQLDkqvXa6kA/18q47/8puzxM3zoC1Pqj/0oeLZE9Y0GsMZBbwix8iTiM0wJoJcLA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.dataprotection.abstractions/6.0.5",
+      "path": "microsoft.aspnetcore.dataprotection.abstractions/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1358,14 +1358,14 @@
         "lib/net6.0/Microsoft.AspNetCore.DataProtection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.xml",
-        "microsoft.aspnetcore.dataprotection.abstractions.6.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.dataprotection.abstractions.6.0.18.nupkg.sha512",
         "microsoft.aspnetcore.dataprotection.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore/6.0.5": {
-      "sha512": "Yi+pHO8JZXAL+QDHAsy2QkBoMBEmSJgvb5mnADtF+j3qF8s3CELy28ofM9q58/h2ZUtHigaYkfjFvys5U4tNbA==",
+    "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore/6.0.18": {
+      "sha512": "fhhwQW3eZ7wmq7XAXgecQ85Vx7JYLHlQe7ug1IYLvb1LD5Y7jwzn6OMroJ2+6QQJzDSyKgq7C8f2L9o3q+6FiQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.dataprotection.entityframeworkcore/6.0.5",
+      "path": "microsoft.aspnetcore.dataprotection.entityframeworkcore/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1373,7 +1373,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.dll",
         "lib/net6.0/Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.dataprotection.entityframeworkcore.6.0.5.nupkg.sha512",
+        "microsoft.aspnetcore.dataprotection.entityframeworkcore.6.0.18.nupkg.sha512",
         "microsoft.aspnetcore.dataprotection.entityframeworkcore.nuspec"
       ]
     },
@@ -1590,10 +1590,10 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/6.0.5": {
-      "sha512": "zNjMWJ6MJ/Qm7S6wFBqVgn7DEpilbDMy0xgA7c4Y1yY9/LoaC2pWwWO4ePaYoPCZpLx/eTViWEr5ZXta/vK//Q==",
+    "Microsoft.EntityFrameworkCore.Design/6.0.10": {
+      "sha512": "SVqDfUftgBoKCMPfTaWXiKBZPHMjbiBJLE5WE7MeD28nTk7CkmUNX8eXyNIeWxpDuk4r0zZ6XG9zyG7Ef3KS4A==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.design/6.0.5",
+      "path": "microsoft.entityframeworkcore.design/6.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1601,7 +1601,7 @@
         "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.6.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.6.0.10.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
@@ -2856,10 +2856,10 @@
         "version.txt"
       ]
     },
-    "System.Security.Cryptography.Pkcs/6.0.0": {
-      "sha512": "elM3x+xSRhzQysiqo85SbidJJ2YbZlnvmh+53TuSZHsD7dNuuEWser+9EFtY+rYupBwkq2avc6ZCO3/6qACgmg==",
+    "System.Security.Cryptography.Pkcs/6.0.1": {
+      "sha512": "ynmbW2GjIGg9K1wXmVIRs4IlyDolf0JXNpzFQ8JCVgwM+myUC2JeUggl2PwQig2PNVMegKmN1aAx7WPQ8tI3vA==",
       "type": "package",
-      "path": "system.security.cryptography.pkcs/6.0.0",
+      "path": "system.security.cryptography.pkcs/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2888,7 +2888,7 @@
         "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
         "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
         "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
-        "system.security.cryptography.pkcs.6.0.0.nupkg.sha512",
+        "system.security.cryptography.pkcs.6.0.1.nupkg.sha512",
         "system.security.cryptography.pkcs.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2928,10 +2928,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.Xml/6.0.0": {
-      "sha512": "puJ4UCh9JVRwOCyCIcq71JY6Axr8Sp8E2GjTIU1Fj8hm4+oX6NEoyGFGa/+pBG8SrVxbQPSj7hvtaREyTHHsmw==",
+    "System.Security.Cryptography.Xml/6.0.1": {
+      "sha512": "5e5bI28T0x73AwTsbuFP4qSRzthmU2C0Gqgg3AZ3KTxmSyA+Uhk31puA3srdaeWaacVnHhLdJywCzqOiEpbO/w==",
       "type": "package",
-      "path": "system.security.cryptography.xml/6.0.0",
+      "path": "system.security.cryptography.xml/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2948,7 +2948,7 @@
         "lib/netstandard2.0/System.Security.Cryptography.Xml.xml",
         "runtimes/win/lib/net461/System.Security.Cryptography.Xml.dll",
         "runtimes/win/lib/net461/System.Security.Cryptography.Xml.xml",
-        "system.security.cryptography.xml.6.0.0.nupkg.sha512",
+        "system.security.cryptography.xml.6.0.1.nupkg.sha512",
         "system.security.cryptography.xml.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3262,7 +3262,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "FileStorage.Infrastructure >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
+      "Microsoft.EntityFrameworkCore.Design >= 6.0.10",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -3317,7 +3317,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[6.0.5, )"
+            "version": "[6.0.10, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

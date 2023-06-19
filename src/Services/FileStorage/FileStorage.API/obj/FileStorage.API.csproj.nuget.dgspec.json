@@ -51,7 +51,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -122,7 +122,13 @@
           "dependencies": {
             "Microsoft.AspNetCore.DataProtection.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.18, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
