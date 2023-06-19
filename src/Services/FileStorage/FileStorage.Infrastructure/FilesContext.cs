@@ -17,6 +17,11 @@ public class FilesContext : DbContext, IUnitOfWork
         _encryptor = encryptor;
     }
 
+    public FilesContext(DbContextOptions<FilesContext> options)
+        : base(options)
+    {
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
